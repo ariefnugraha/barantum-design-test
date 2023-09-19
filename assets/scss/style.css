@@ -3,10 +3,6 @@
   src: url("../fonts/Satoshi-Regular.otf");
 }
 @font-face {
-  font-family: "satoshi-medium";
-  src: url("../fonts/Satoshi-Medium.otf");
-}
-@font-face {
   font-family: "satoshi-bold";
   src: url("../fonts/Satoshi-Bold.otf");
 }
@@ -188,10 +184,6 @@ button {
 }
 
 .satoshi-regular {
-  font-family: "satoshi-regular", sans-serif;
-}
-
-.satoshi-medium {
   font-family: "satoshi-regular", sans-serif;
 }
 

@@ -293,6 +293,7 @@ input[type=date] {
   padding-left: 3.125rem;
 }
 input[type=date]::-webkit-inner-spin-button, input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
   background: transparent;
   bottom: 0;
   color: transparent;

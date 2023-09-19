@@ -94,7 +94,9 @@ button {
     display: block;
 }
 
-.d-none {display: none;}
+.d-none {
+    display: none;
+}
 
 // 5. FLEX
 .d-flex {
@@ -105,7 +107,9 @@ button {
     flex-direction: column;
 }
 
-.flex-1 {flex: 1;}
+.flex-1 {
+    flex: 1;
+}
 
 // 6. JUSTIFY CONTENT
 .justify-content-center {
@@ -116,7 +120,9 @@ button {
     justify-content: space-between;
 }
 
-.justify-content-end {justify-content: flex-end;}
+.justify-content-end {
+    justify-content: flex-end;
+}
 
 // 7. ALIGN ITEM
 .align-items-center {
@@ -163,7 +169,9 @@ button {
     color: $primary-main;
 }
 
-.text-danger-main {color: $danger-main;}
+.text-danger-main {
+    color: $danger-main;
+}
 
 // 9.2 BACKGROUND COLOR
 .bg-neutral-10 {
@@ -313,18 +321,20 @@ input[type="file"] {
 input[type="date"] {
     position: relative;
     padding-left: 3.125rem;
+
     &::-webkit-inner-spin-button,
     &::-webkit-calendar-picker-indicator {
+        opacity: 0;
         background: transparent;
-    bottom: 0;
-    color: transparent;
-    cursor: pointer;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
+        bottom: 0;
+        color: transparent;
+        cursor: pointer;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
     }
 
     &::before {
@@ -458,12 +468,16 @@ nav {
     left: 0;
     right: 0;
     z-index: 99;
+
     .nav-link {
         display: flex;
         column-gap: 40px;
         list-style: none;
 
-        .profile {display: none;}
+        .profile {
+            display: none;
+        }
+
         a {
             padding-bottom: 2rem;
             color: $neutral-50;
@@ -657,20 +671,24 @@ nav {
             &.show {
                 right: 0;
             }
+
             .profile {
                 display: block;
                 padding-bottom: 1rem;
                 border-bottom: solid 1px $neutral-10;
 
-                a {padding-bottom: 0;}
+                a {
+                    padding-bottom: 0;
+                }
             }
 
             li {
                 margin-bottom: 1.25rem;
             }
+
             a {
                 color: $neutral-10;
-            
+
                 &:hover {
                     font-weight: 400;
                     border: none;
@@ -678,8 +696,13 @@ nav {
             }
         }
 
-        .profile {display: none;}
-        .btn-menu-mobile {display: block;}
+        .profile {
+            display: none;
+        }
+
+        .btn-menu-mobile {
+            display: block;
+        }
     }
 
     .dashboard {
@@ -687,7 +710,8 @@ nav {
             flex-wrap: wrap;
             row-gap: 1.25rem;
             padding: 0 1.25rem 1.25rem 1.25rem;
-            .left, 
+
+            .left,
             .right {
                 width: 100%;
             }
@@ -701,28 +725,37 @@ nav {
             .left {
                 .list-btn-profile {
                     column-gap: .5rem;
+
                     a {
                         width: calc(33.3% - .25rem);
-                        div {display: none;}  
-                    } 
-                } 
 
-                h2 {font-size: 1.25rem;}
+                        div {
+                            display: none;
+                        }
+                    }
+                }
+
+                h2 {
+                    font-size: 1.25rem;
+                }
             }
 
             .right {
                 .tab-container .tab-content#activity .item {
                     flex-wrap: wrap;
                     row-gap: 1rem;
+
                     div {
                         width: 100%;
                     }
-                } 
+                }
 
                 .form-button {
                     justify-content: flex-start;
                     flex-wrap: wrap;
+
                     button {
+
                         &.cancel,
                         &.save {
                             width: 100%;
@@ -742,6 +775,9 @@ nav {
     .dashboard .container .left .list-btn-profile {
         flex-wrap: wrap;
         row-gap: 1rem;
-        a {width: 100%;}
-    } 
+
+        a {
+            width: 100%;
+        }
+    }
 }

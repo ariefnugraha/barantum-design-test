@@ -1,10 +1,45 @@
+/*
+
+    Made With Love By Muhammad Arief Nugraha
+
+    1. Load Font
+    2. Utilities
+    3. Button
+    4. Display
+    5. Flex
+    6. Justify Content
+    7. Align Items
+    8. Gap
+    9. Color
+        9.1. Text Color
+        9.2. Background Color
+    10. Padding
+    11. Typography
+        11.1. Font Size
+        11.2. Font Family
+        11.3. Text Decoration
+        11.4. Text Align
+    12. Margin
+    13. Form & Input
+    14. Border Radius
+    15. Login
+    16. Object Cover
+    17. Navbar
+    18. Tab
+        18.1. Tab List
+        18.2. Tab Content
+    19. Dashboard Page
+    20. Responsive
+*/
 @font-face {
   font-family: "satoshi-regular";
   src: url("../fonts/Satoshi-Regular.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "satoshi-bold";
   src: url("../fonts/Satoshi-Bold.otf");
+  font-display: swap;
 }
 * {
   box-sizing: border-box;

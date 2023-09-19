@@ -1,12 +1,48 @@
+/*
+
+    Made With Love By Muhammad Arief Nugraha
+
+    1. Load Font
+    2. Utilities
+    3. Button
+    4. Display
+    5. Flex
+    6. Justify Content
+    7. Align Items
+    8. Gap
+    9. Color
+        9.1. Text Color
+        9.2. Background Color
+    10. Padding
+    11. Typography
+        11.1. Font Size
+        11.2. Font Family
+        11.3. Text Decoration
+        11.4. Text Align
+    12. Margin
+    13. Form & Input
+    14. Border Radius
+    15. Login
+    16. Object Cover
+    17. Navbar
+    18. Tab
+        18.1. Tab List
+        18.2. Tab Content
+    19. Dashboard Page
+    20. Responsive
+*/
+
 // 1. LOAD FONT
 @font-face {
     font-family: 'satoshi-regular';
     src: url('../fonts/Satoshi-Regular.otf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'satoshi-bold';
     src: url('../fonts/Satoshi-Bold.otf');
+    font-display: swap;
 }
 
 $neutral-10: #FFFFFF;
@@ -71,7 +107,7 @@ button {
 
 .flex-1 {flex: 1;}
 
-// 4. JUSTIFY CONTENT
+// 6. JUSTIFY CONTENT
 .justify-content-center {
     justify-content: center;
 }
@@ -82,12 +118,12 @@ button {
 
 .justify-content-end {justify-content: flex-end;}
 
-// 5. ALIGN ITEM
+// 7. ALIGN ITEM
 .align-items-center {
     align-items: center;
 }
 
-// 6 GAP
+// 8 GAP
 .col-gap-40 {
     column-gap: 40px;
 }
@@ -108,9 +144,9 @@ button {
     row-gap: 16px;
 }
 
-// 7. COLOR
+// 9. COLOR
 
-// 7.1 TEXT COLOR
+// 9.1 TEXT COLOR
 .text-neutral-10 {
     color: $neutral-10;
 }
@@ -129,7 +165,7 @@ button {
 
 .text-danger-main {color: $danger-main;}
 
-// 7.2 BACKGROUND COLOR
+// 9.2 BACKGROUND COLOR
 .bg-neutral-10 {
     background: $neutral-10;
 }
@@ -155,7 +191,7 @@ button {
 }
 
 
-// 8 PADDING
+// 10 PADDING
 .p-40 {
     padding: 2.5rem;
 }
@@ -184,9 +220,9 @@ button {
     padding-bottom: .5rem;
 }
 
-// 9 TYPOGRAPHY
+// 11 TYPOGRAPHY
 
-// 9.1 FONT SIZE
+// 11.1 FONT SIZE
 .text-40 {
     font-size: 2.5rem;
 }
@@ -203,7 +239,7 @@ button {
     font-size: .875rem;
 }
 
-// 9.2 FONT FAMILY
+// 11.2 FONT FAMILY
 .satoshi-regular {
     font-family: "satoshi-regular", sans-serif;
 }
@@ -212,12 +248,12 @@ button {
     font-family: "satoshi-bold", sans-serif;
 }
 
-// 9.3 TEXT DECORATION
+// 11.3 TEXT DECORATION
 a {
     text-decoration: none;
 }
 
-// 9.4 TEXT ALIGN
+// 11.4 TEXT ALIGN
 .text-center {
     text-align: center;
 }
@@ -226,7 +262,7 @@ a {
     text-align: right;
 }
 
-// 10 MARGIN
+// 12 MARGIN
 .mt-40 {
     margin-top: 2.5rem;
 }
@@ -247,7 +283,7 @@ a {
     margin-top: .25rem;
 }
 
-// 11 FORM & INPUT
+// 13 FORM & INPUT
 input:not([type="radio"]),
 input:not([type="checkbox"]),
 input:not([type="file"]),
@@ -356,7 +392,7 @@ label {
     display: block;
 }
 
-// 12. BORDER RADIUS
+// 14. BORDER RADIUS
 .radius-8 {
     border-radius: .5rem;
 }
@@ -365,7 +401,7 @@ label {
     border-radius: 6.25rem;
 }
 
-// 12 LOGIN
+// 15 LOGIN
 .login {
     overflow-x: hidden;
 
@@ -410,12 +446,12 @@ label {
     }
 }
 
-//13 OBJECT COVER
+// 16 OBJECT COVER
 .obj-cover {
     object-fit: cover;
 }
 
-// 13. NAVBAR
+// 17. NAVBAR
 nav {
     position: fixed;
     top: 0;
@@ -457,9 +493,9 @@ nav {
     }
 }
 
-// 14. TAB 
+// 18. TAB 
 
-// 14.1 TAB LIST
+// 18.1 TAB LIST
 .tab-list {
     display: flex;
     column-gap: 1.25rem;
@@ -478,7 +514,7 @@ nav {
     }
 }
 
-// 14.2 TAB CONTENT
+// 18.2 TAB CONTENT
 .tab-container {
     .tab-content {
         opacity: 0;
@@ -524,7 +560,7 @@ nav {
     }
 }
 
-// 14. DASHBOARD PAGE
+// 19. DASHBOARD PAGE
 .dashboard {
 
     .container {
@@ -573,7 +609,7 @@ nav {
     }
 }
 
-// 13. RESPONSIVE
+// 20. RESPONSIVE
 
 @media (min-width: 1500px) {
     .login .illustration .images .laptop {

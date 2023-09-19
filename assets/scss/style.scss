@@ -1,0 +1,720 @@
+// 1. LOAD FONT
+@font-face {
+    font-family: 'satoshi-regular';
+    src: url('../fonts/Satoshi-Regular.otf');
+}
+
+@font-face {
+    font-family: 'satoshi-medium';
+    src: url('../fonts/Satoshi-Medium.otf');
+}
+
+@font-face {
+    font-family: 'satoshi-bold';
+    src: url('../fonts/Satoshi-Bold.otf');
+}
+
+$neutral-10: #FFFFFF;
+$neutral-20: #F9F9F9;
+$neutral-30: #DDDDDD;
+$neutral-40: #666666;
+$neutral-50: #121212;
+$primary-main: #03045E;
+$success-main: #40916C;
+$orange-main: #F77F00;
+$info-main: #0077B6;
+$danger-main: #fd1111;
+
+
+
+// 2. UTILITIES
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'satoshi-regular', sans-serif;
+}
+
+// 3. BUTTON
+button {
+    width: 100%;
+    display: block;
+    background: transparent;
+    padding: 1.25rem 1rem;
+    border-radius: 6.25rem;
+    font-family: "satoshi-bold", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+// 4. DISPLAY
+.d-block {
+    display: block;
+}
+
+.d-none {display: none;}
+
+// 5. FLEX
+.d-flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-1 {flex: 1;}
+
+// 4. JUSTIFY CONTENT
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-end {justify-content: flex-end;}
+
+// 5. ALIGN ITEM
+.align-items-center {
+    align-items: center;
+}
+
+// 6 GAP
+.col-gap-40 {
+    column-gap: 40px;
+}
+
+.col-gap-20 {
+    column-gap: 1.25rem;
+}
+
+.col-gap-16 {
+    column-gap: 16px;
+}
+
+.col-gap-8 {
+    column-gap: 8px;
+}
+
+.row-gap-16 {
+    row-gap: 16px;
+}
+
+// 7. COLOR
+
+// 7.1 TEXT COLOR
+.text-neutral-10 {
+    color: $neutral-10;
+}
+
+.text-neutral-40 {
+    color: $neutral-40;
+}
+
+.text-neutral-50 {
+    color: $neutral-50;
+}
+
+.text-primary-main {
+    color: $primary-main;
+}
+
+.text-danger-main {color: $danger-main;}
+
+// 7.2 BACKGROUND COLOR
+.bg-neutral-10 {
+    background: $neutral-10;
+}
+
+.bg-neutral-20 {
+    background: $neutral-20;
+}
+
+.bg-primary-main {
+    background: $primary-main;
+}
+
+.bg-success-main {
+    background: $success-main;
+}
+
+.bg-orange-main {
+    background: $orange-main;
+}
+
+.bg-info-main {
+    background: $info-main;
+}
+
+
+// 8 PADDING
+.p-40 {
+    padding: 2.5rem;
+}
+
+.p-20 {
+    padding: 1.25rem;
+}
+
+.py-20 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.px-40 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.px-20 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.py-8 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+// 9 TYPOGRAPHY
+
+// 9.1 FONT SIZE
+.text-40 {
+    font-size: 2.5rem;
+}
+
+.text-24 {
+    font-size: 1.5rem;
+}
+
+.text-20 {
+    font-size: 1.25rem;
+}
+
+.text-14 {
+    font-size: .875rem;
+}
+
+// 9.2 FONT FAMILY
+.satoshi-regular {
+    font-family: "satoshi-regular", sans-serif;
+}
+
+.satoshi-medium {
+    font-family: "satoshi-regular", sans-serif;
+}
+
+.satoshi-bold {
+    font-family: "satoshi-bold", sans-serif;
+}
+
+// 9.3 TEXT DECORATION
+a {
+    text-decoration: none;
+}
+
+// 9.4 TEXT ALIGN
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// 10 MARGIN
+.mt-40 {
+    margin-top: 2.5rem;
+}
+
+.mt-20 {
+    margin-top: 1.25rem;
+}
+
+.mt-16 {
+    margin-top: 1rem;
+}
+
+.mt-8 {
+    margin-top: .5rem;
+}
+
+.mt-4 {
+    margin-top: .25rem;
+}
+
+// 11 FORM & INPUT
+input:not([type="radio"]),
+input:not([type="checkbox"]),
+input:not([type="file"]),
+select,
+textarea {
+    width: 100%;
+    border: solid 1px $neutral-30;
+    border-radius: 8px;
+    padding: .75rem 1.25rem;
+    outline: none;
+    font-family: "satoshi-regular", sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+::placeholder {
+    color: $neutral-40;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+input[type="date"] {
+    position: relative;
+    padding-left: 3.125rem;
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+        background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    }
+
+    &::before {
+        content: url('../images/icons/calendar.svg');
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 1.25rem;
+        transform: translateY(-40%);
+    }
+
+    &::after {
+        content: url('../images/icons/caret.svg');
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 1.25rem;
+        transform: translateY(-40%);
+    }
+}
+
+select {
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    background-image: url('../images/icons/caret.svg');
+    background-repeat: no-repeat;
+    background-position: 95% 45%;
+}
+
+.input-with-icon {
+    position: relative;
+
+    input:not([type="radio"]),
+    input:not([type="file"]),
+    input:not([type="checkbox"]) {
+        width: 100%;
+        padding: 1.25rem 1.25rem 1.25rem 3.125rem;
+        outline: none;
+    }
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 1.25rem;
+        transform: translateY(-40%);
+    }
+}
+
+.show-password {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    transform: translateY(-40%);
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+}
+
+label {
+    display: block;
+}
+
+// 12. BORDER RADIUS
+.radius-8 {
+    border-radius: .5rem;
+}
+
+.radius-100 {
+    border-radius: 6.25rem;
+}
+
+// 12 LOGIN
+.login {
+    overflow-x: hidden;
+
+    .content {
+        width: 50%;
+
+        .form {
+            flex-grow: 1;
+
+            h2 {
+                display: none;
+                margin-bottom: 1.25rem;
+            }
+
+            hr {
+                width: 100%;
+                margin-top: 1.25rem;
+                border: solid .5px $neutral-30;
+            }
+        }
+    }
+
+    .illustration {
+        width: 50%;
+
+        .images {
+            position: relative;
+            margin-top: 40px;
+
+            .dashboard-image {
+                position: relative;
+                left: 0%;
+            }
+
+            .laptop {
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-40%);
+            }
+        }
+    }
+}
+
+//13 OBJECT COVER
+.obj-cover {
+    object-fit: cover;
+}
+
+// 13. NAVBAR
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    .nav-link {
+        display: flex;
+        column-gap: 40px;
+        list-style: none;
+
+        .profile {display: none;}
+        a {
+            padding-bottom: 2rem;
+            color: $neutral-50;
+
+            &.active,
+            &:hover {
+                border-bottom: solid 2px $primary-main;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .profile {
+        color: $neutral-50;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .btn-menu-mobile {
+        width: auto;
+        display: none;
+        border: none;
+        border-radius: initial;
+        padding: 0;
+    }
+}
+
+// 14. TAB 
+
+// 14.1 TAB LIST
+.tab-list {
+    display: flex;
+    column-gap: 1.25rem;
+
+    .tab-link {
+        flex: 1;
+        font-family: "satoshi-bold", sans-serif;
+        text-align: center;
+        padding-bottom: .5rem;
+        color: $neutral-50;
+
+        &.active,
+        &:hover {
+            border-bottom: solid 2px $primary-main;
+        }
+    }
+}
+
+// 14.2 TAB CONTENT
+.tab-container {
+    .tab-content {
+        opacity: 0;
+        transition: opacity .5s;
+
+        &.active {
+            opacity: 1;
+        }
+
+        &#activity {
+            .item {
+                div {
+                    width: calc(50% - .625rem);
+                }
+            }
+
+            .upload-document {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                border: dashed 1px $primary-main;
+                padding: 1.25rem .75rem;
+                cursor: pointer;
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    background: $primary-main;
+                    border-radius: 50%;
+                }
+
+                p {
+                    text-align: center;
+                    color: $primary-main;
+                }
+            }
+        }
+    }
+}
+
+// 14. DASHBOARD PAGE
+.dashboard {
+
+    .container {
+        margin-top: 7.5rem;
+        padding: 0 2.5rem 2.5rem 2.5rem;
+
+        .left {
+            width: 460px;
+
+            .list-btn-profile {
+                a {
+                    width: calc(33.3% - .875rem);
+                    font-size: .875rem;
+                }
+            }
+
+            .profile-contact {
+                .item {
+                    padding-bottom: 1rem;
+                    border-bottom: solid 1px $neutral-30;
+
+                    &:last-child {
+                        padding-bottom: 0;
+                        border: none;
+                    }
+                }
+
+            }
+        }
+
+        .right {
+            width: calc(100% - 500px);
+
+            .form-button {
+                .cancel {
+                    width: auto;
+                    border: none;
+                }
+
+                .save {
+                    padding: .5rem 1.25rem;
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+
+// 13. RESPONSIVE
+
+@media (min-width: 1500px) {
+    .login .illustration .images .laptop {
+        bottom: -100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .illustration {
+        display: none;
+    }
+
+    .login .content {
+        width: 100%;
+        justify-content: center;
+
+        .form {
+            display: block;
+            flex-grow: initial;
+
+            h2 {
+                display: block;
+                margin-top: 1.25rem;
+            }
+        }
+    }
+
+    .p-40 {
+        padding: 1.25rem;
+    }
+
+    nav {
+        .nav-link {
+            flex-direction: column;
+            position: fixed;
+            top: 86px;
+            bottom: 0;
+            right: -250px;
+            width: 250px;
+            background: $primary-main;
+            padding: 2.5rem 1.25rem;
+            margin: 0;
+            transition: right ease-in-out .4s;
+
+            &.show {
+                right: 0;
+            }
+            .profile {
+                display: block;
+                padding-bottom: 1rem;
+                border-bottom: solid 1px $neutral-10;
+
+                a {padding-bottom: 0;}
+            }
+
+            li {
+                margin-bottom: 1.25rem;
+            }
+            a {
+                color: $neutral-10;
+            
+                &:hover {
+                    font-weight: 400;
+                    border: none;
+                }
+            }
+        }
+
+        .profile {display: none;}
+        .btn-menu-mobile {display: block;}
+    }
+
+    .dashboard {
+        .container {
+            flex-wrap: wrap;
+            row-gap: 1.25rem;
+            padding: 0 1.25rem 1.25rem 1.25rem;
+            .left, 
+            .right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboard {
+        .container {
+            .left {
+                .list-btn-profile {
+                    column-gap: .5rem;
+                    a {
+                        width: calc(33.3% - .25rem);
+                        div {display: none;}  
+                    } 
+                } 
+
+                h2 {font-size: 1.25rem;}
+            }
+
+            .right {
+                .tab-container .tab-content#activity .item {
+                    flex-wrap: wrap;
+                    row-gap: 1rem;
+                    div {
+                        width: 100%;
+                    }
+                } 
+
+                .form-button {
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    button {
+                        &.cancel,
+                        &.save {
+                            width: 100%;
+                        }
+
+                        &.cancel {
+                            order: 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .dashboard .container .left .list-btn-profile {
+        flex-wrap: wrap;
+        row-gap: 1rem;
+        a {width: 100%;}
+    } 
+}

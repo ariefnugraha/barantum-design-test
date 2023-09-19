@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/scss/style.css">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="login d-flex col-gap-40">
+    <!-- START CONTENT -->
+    <div class="content d-flex flex-col p-40">
+        <a href="#">
+            <img src="./assets/images/logo.png" alt="Logo" width="58" height="60">
+        </a>
+
+        <div class="form d-flex flex-col justify-content-center">
+            <form action="">
+                <h2 class="text-primary-main text-24">Access Your <br/>
+                    CRM Dashboard</h2>
+                <h3 class="satoshi-bold text-24 text-primary-main">Login</h2>
+    
+                <div class="mt-20">
+                    <label for="email">Email</label>
+    
+                    <div class="input-with-icon mt-8">
+                        <input type="email" name="email" id="email" placeholder="Email">
+    
+                        <div>
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.29 5.408C10.4241 5.13561 13.5759 5.13561 16.71 5.408L18.221 5.538C18.7055 5.58018 19.1715 5.74399 19.5759 6.01424C19.9802 6.2845 20.3098 6.65245 20.534 7.084C20.5602 7.13724 20.5654 7.1984 20.5485 7.2553C20.5317 7.31219 20.494 7.36064 20.443 7.391L14.177 11.271C13.5175 11.6793 12.7589 11.8993 11.9833 11.9073C11.2077 11.9152 10.4447 11.7107 9.777 11.316L3.47 7.588C3.42029 7.55989 3.38246 7.51471 3.36351 7.46083C3.34457 7.40695 3.34581 7.34804 3.367 7.295C3.57129 6.8104 3.90398 6.39075 4.32921 6.0813C4.75443 5.77186 5.25606 5.58435 5.78 5.539L7.29 5.408Z"
+                                    fill="#03045E" />
+                                <path
+                                    d="M3.36199 9.267C3.32626 9.24583 3.28579 9.23398 3.24428 9.23252C3.20278 9.23106 3.16157 9.24005 3.12444 9.25867C3.08731 9.27728 3.05546 9.30492 3.03179 9.33905C3.00813 9.37318 2.99341 9.4127 2.98899 9.454C2.73492 11.9718 2.79673 14.5115 3.17299 17.014C3.26983 17.6552 3.57965 18.2451 4.05256 18.6888C4.52546 19.1325 5.13393 19.4042 5.77999 19.46L7.28999 19.591C10.425 19.864 13.577 19.864 16.712 19.591L18.222 19.461C18.8683 19.4048 19.4769 19.1327 19.9497 18.6884C20.4224 18.2441 20.7318 17.6536 20.828 17.012C21.2152 14.4366 21.2693 11.8222 20.989 9.233C20.9841 9.19153 20.9689 9.15196 20.9447 9.11795C20.9205 9.08394 20.8881 9.05659 20.8505 9.03844C20.8129 9.02029 20.7713 9.01193 20.7296 9.01412C20.6879 9.01632 20.6475 9.029 20.612 9.051L14.967 12.545C14.075 13.097 13.049 13.3945 12 13.4053C10.951 13.416 9.91913 13.1396 9.01599 12.606L3.36299 9.266L3.36199 9.267Z"
+                                    fill="#03045E" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <p id="error-email" class="text-14 text-danger-main mt-8"></p>
+                </div>
+    
+                <div class="mt-20 password">
+                    <label for="password">Password</label>
+    
+                    <div class="input-with-icon mt-8">
+                        <input type="password" name="password" id="password" placeholder="Password" class="hide">
+    
+                        <div>
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 14.5C5.9 14.5 5 13.6 5 12.5C5 11.4 5.9 10.5 7 10.5C8.1 10.5 9 11.4 9 12.5C9 13.6 8.1 14.5 7 14.5ZM12.6 10.5C11.8 8.2 9.6 6.5 7 6.5C3.7 6.5 1 9.2 1 12.5C1 15.8 3.7 18.5 7 18.5C9.6 18.5 11.8 16.8 12.6 14.5H16V18.5H20V14.5H23V10.5H12.6Z" fill="#03045E"/>
+                                </svg>
+                                
+                        </div>
+    
+                        <button type="button" class="show-password hide" onclick="showPassword()">
+                            <img src="./assets/images/icons/show-password.svg" alt="Password" width="20" height="20">
+                        </button>
+                    </div>
+
+                    <p id="error-password" class="text-14 text-danger-main mt-8"></p>
+                </div>
+    
+                <button type="submit" class="bg-primary-main text-neutral-10 mt-20" onclick="submitForm(event)">Login</button>
+    
+                <a href="#" class="d-block mt-20 text-14 text-neutral-50 text-center">Forgot Password?</a>
+    
+                <hr/>
+    
+                <p class="text-14 text-center mt-20">Don’t Have An Account? <a href="#" class="text-primary-main satoshi-bold">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+    <!-- END CONTENT -->
+
+    <!-- START ILLUSTRATION-->
+    <div class="illustration bg-primary-main text-neutral-10 p-40">
+        <h1 class="satoshi-bold text-40">Access Your CRM Dashboard</h1>
+        <p class="text-20 mt-8">Welcome to our secure CRM login page, where you can access your account with peace of mind. </p>
+
+        <div class="images">
+            <img src="./assets/images/dashboard.png" alt="Dashboard" width="850" height="604" class="dashboard-image">
+
+            <img src="./assets/images/laptop.png" alt="Dashboard In Laptop" width="586" height="322" class="laptop">
+        </div>
+    </div>
+    <!-- END ILLUSTRATION-->
+
+    <script>
+        // SHOW HIDE PASSWORD
+        function showPassword() {
+            let password = document.getElementById('password');
+            let btnPassword = document.querySelector('.show-password');
+
+            if(password.classList.contains('hide')) {
+                password.setAttribute('type', 'text');
+                password.classList.remove('hide');
+                btnPassword.querySelector('img').src = "./assets/images/icons/hide-password.svg";
+            } else {
+                password.setAttribute('type', 'password');
+                password.classList.add('hide');
+                btnPassword.querySelector('img').src = "./assets/images/icons/show-password.svg"
+            } 
+        }
+
+        // SUBMIT FORM
+        function submitForm(event) {
+            console.log('masuk')
+            event.preventDefault();
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let errEmail = document.getElementById('error-email');
+            let errPass = document.getElementById('error-password');
+
+            console.log(email);
+            console.log(password)
+            if(email.length === 0) {
+                errEmail.innerText = "You Must Fill The Email";
+            } else if(password.length === 0) {
+                errPass.innerText = "You Must Fill The Password";
+            } else {
+                errEmail.innerText = "";
+                errPass.innerText = "";
+            
+                // PUT CODE FOR SUBMIT FORM BELOW HERE
+                window.location.href = "dashboard.html";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
